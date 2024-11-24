@@ -33,8 +33,13 @@ $sql = "CREATE TABLE IF NOT EXISTS links (
     weixin VARCHAR(255) NULL
 )";
 
-$mysql->query("INSERT INTO links (id) VALUES (1)");
-
 if (!$mysql->query($sql)) {
     die("Error creating table: " . $mysql->error);
+}
+
+// Добавляем запись только если таблица пуста
+$result = $mysql->query("SELECT COUNT(*) as count FROM links");
+$row = $result->fetch_assoc();
+if ($row['count'] == 0) {
+    $mysql->query("INSERT INTO links (id) VALUES (1)");
 }

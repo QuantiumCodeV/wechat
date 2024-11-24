@@ -6,10 +6,12 @@ ini_set('display_errors', 1);
 
 $config = [
     "MYSQL_HOST" => "localhost", 
-    "MYSQL_USER" => "admin",
+    "MYSQL_USER" => "wechat",
     "MYSQL_PASSWORD" => "72Merasardtfy_",
     "MYSQL_DATABASE" => "wechat",
 ];
+$USERNAME_DEFAULT = "adminLogin";
+$PASSWORD_DEFAULT = "passwordAdmin";
 
 
 $mysql = new mysqli($config["MYSQL_HOST"], $config["MYSQL_USER"], $config["MYSQL_PASSWORD"]);
@@ -27,10 +29,7 @@ $mysql->select_db($config["MYSQL_DATABASE"]);
 $sql = "CREATE TABLE IF NOT EXISTS links (
     id INT AUTO_INCREMENT PRIMARY KEY,
     apple VARCHAR(255) NULL,
-    macapple VARCHAR(255) NULL,
-    google VARCHAR(255) NULL,
-    microsoft VARCHAR(255) NULL,
-    weixin VARCHAR(255) NULL
+    windows VARCHAR(255) NULL
 )";
 
 if (!$mysql->query($sql)) {

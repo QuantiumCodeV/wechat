@@ -250,40 +250,14 @@ $links = $result;
             <div class="logo"></div>
             <img class="bg_slogan" src="./assets/1jwBxj0.png" />
           </div>
-          <div class="download_btns">
-            <a
-              class="btn ic_download_apple"
-              href="<?php echo $links['apple']; ?>"
-            ></a>
-            <div class="download_android_btns">
-              <a
-                id="btn_android" 
-                class="btn ic_download_android"
-                href="javascript:;"
-              ></a>
-              <div
-                id="btn_android_wrap"
-                class="btn_android_wrap"
-                style="display: none"
-              >
-                <a
-                  class="btn_googlepaly"
-                  href="<?php echo $links['google']; ?>"
-                  >Google Play</a
-                >
-                <a class="btn_weixin" href="<?php echo $links['weixin']; ?>"
-                  >Weixin Version</a
-                >
-              </div>
-            </div>
-          </div>
+          
           <div class="download_btns">
             <a
               id="new_ele"
               class="btn ic_download_mac ele_new"
               style=""
               title="Mac Download" 
-              href="<?php echo $links['macapple']; ?>"
+              href="<?php echo $links['apple']; ?>"
             >
               <em class=""></em>
             </a>
@@ -291,7 +265,7 @@ $links = $result;
               class="btn ic_download_win"
               style=""
               title="Windows Download"
-              href="<?php echo $links['microsoft']; ?>"
+              href="<?php echo $links['windows']; ?>"
             >
               <em class="i"></em>
             </a>

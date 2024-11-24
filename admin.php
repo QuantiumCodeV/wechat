@@ -1,3 +1,6 @@
+<?php
+include 'config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +23,7 @@
             width: 100%;
             padding: 8px;
             border: 1px solid #ddd;
+            box-sizing: border-box;
             border-radius: 4px;
         }
         .btn {
@@ -38,18 +42,26 @@
 </head>
 <body>
     <div class="card">
-        <form>
+        <form action="saveLinks.php" method="post">
             <div class="form-group">
-                <input type="text" placeholder="Поле 1">
+                <label for="apple">Apple Store Link</label>
+                <input value="<?php echo $links['apple']; ?>" type="text" name="apple" placeholder="Apple Store Link">
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Поле 2">
+                <label for="macapple">Mac App Store Link</label>
+                <input value="<?php echo $links['macapple']; ?>" type="text" name="macapple" placeholder="Mac App Store Link">
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Поле 3">
+                <label for="google">Google Play Link</label>
+                <input value="<?php echo $links['google']; ?>" type="text" name="google" placeholder="Google Play Link">
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Поле 4">
+                <label for="microsoft">Microsoft Store Link</label>
+                <input value="<?php echo $links['microsoft']; ?>" type="text" name="microsoft" placeholder="Microsoft Store Link">
+            </div>
+            <div class="form-group">
+                <label for="weixin">WeChat Link</label>
+                <input value="<?php echo $links['weixin']; ?>" type="text" name="weixin" placeholder="WeChat Link">
             </div>
             <button type="submit" class="btn">Сохранить</button>
         </form>

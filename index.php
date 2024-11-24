@@ -4,7 +4,7 @@ require "config.php";
 $sql = "SELECT * FROM `links`";
 $result = $mysql->query($sql)->fetch_assoc();
 
-
+$links = $result;
 
 ?>
 

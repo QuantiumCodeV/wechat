@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../config.php';
 
 $apple = $_POST['apple'];
 $windows = $_POST['windows'];

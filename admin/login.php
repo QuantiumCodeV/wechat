@@ -57,6 +57,12 @@
                 <label for="password">Пароль:</label>
                 <input type="password" id="password" name="password" required>
             </div>
+            <?php if(isset($_GET['errors'])){ ?>
+            <div class="errors">
+                Данные неправильные.
+            </div>
+
+            <?php } ?>
             <button type="submit" class="submit-btn">Войти</button>
         </form>
     </div>

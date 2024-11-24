@@ -67,12 +67,7 @@ if ($result->num_rows > 0) {
                 <label for="windows">Windows Link</label>
                 <input value="<?php echo $links['windows'] ?? ''; ?>" type="text" name="windows" placeholder="Windows Link">
             </div>
-            <?php if(isset($_GET['errors'])){ ?>
-            <div class="errors">
-                Данные неправильные.
-            </div>
-
-            <?php } ?>
+            
             <button type="submit" class="btn">Сохранить</button>
         </form>
     </div>

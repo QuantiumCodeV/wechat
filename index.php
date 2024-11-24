@@ -257,7 +257,7 @@ $result = $mysql->query($sql)->fetch_assoc();
             ></a>
             <div class="download_android_btns">
               <a
-                id="btn_android"
+                id="btn_android" 
                 class="btn ic_download_android"
                 href="javascript:;"
               ></a>
@@ -271,7 +271,7 @@ $result = $mysql->query($sql)->fetch_assoc();
                   href="<?php echo $links['google']; ?>"
                   >Google Play</a
                 >
-                <a class="btn_weixin" href="https://weixin.qq.com/"
+                <a class="btn_weixin" href="<?php echo $links['weixin']; ?>"
                   >Weixin Version</a
                 >
               </div>
@@ -282,8 +282,8 @@ $result = $mysql->query($sql)->fetch_assoc();
               id="new_ele"
               class="btn ic_download_mac ele_new"
               style=""
-              title="Mac Download"
-              href="<?php echo $links['apple']; ?>"
+              title="Mac Download" 
+              href="<?php echo $links['macapple']; ?>"
             >
               <em class=""></em>
             </a>
@@ -291,7 +291,7 @@ $result = $mysql->query($sql)->fetch_assoc();
               class="btn ic_download_win"
               style=""
               title="Windows Download"
-              href="<?php echo $links['windows']; ?>"
+              href="<?php echo $links['microsoft']; ?>"
             >
               <em class="i"></em>
             </a>

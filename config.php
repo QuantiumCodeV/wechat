@@ -29,7 +29,8 @@ $sql = "CREATE TABLE IF NOT EXISTS links (
     apple VARCHAR(255),
     macapple VARCHAR(255),
     google VARCHAR(255),
-    microsoft VARCHAR(255)
+    microsoft VARCHAR(255),
+    weixin VARCHAR(255)
 )";
 
 if (!$mysql->query($sql)) {

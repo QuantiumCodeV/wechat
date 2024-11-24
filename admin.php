@@ -2,7 +2,9 @@
 include 'config.php';
 $sql = "SELECT * FROM links";
 $result = $mysql->query($sql);
-$links = $result->fetch_assoc();
+if ($result->num_rows > 0) {
+    $links = $result->fetch_assoc();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,23 +50,23 @@ $links = $result->fetch_assoc();
         <form action="saveLinks.php" method="post">
             <div class="form-group">
                 <label for="apple">Apple Store Link</label>
-                <input value="<?php echo $links['apple']; ?>" type="text" name="apple" placeholder="Apple Store Link">
+                <input value="<?php echo $links['apple'] ?? ''; ?>" type="text" name="apple" placeholder="Apple Store Link">
             </div>
             <div class="form-group">
                 <label for="macapple">Mac App Store Link</label>
-                <input value="<?php echo $links['macapple']; ?>" type="text" name="macapple" placeholder="Mac App Store Link">
+                <input value="<?php echo $links['macapple'] ?? ''; ?>" type="text" name="macapple" placeholder="Mac App Store Link">
             </div>
             <div class="form-group">
                 <label for="google">Google Play Link</label>
-                <input value="<?php echo $links['google']; ?>" type="text" name="google" placeholder="Google Play Link">
+                <input value="<?php echo $links['google'] ?? ''; ?>" type="text" name="google" placeholder="Google Play Link">
             </div>
             <div class="form-group">
                 <label for="microsoft">Microsoft Store Link</label>
-                <input value="<?php echo $links['microsoft']; ?>" type="text" name="microsoft" placeholder="Microsoft Store Link">
+                <input value="<?php echo $links['microsoft'] ?? ''; ?>" type="text" name="microsoft" placeholder="Microsoft Store Link">
             </div>
             <div class="form-group">
                 <label for="weixin">WeChat Link</label>
-                <input value="<?php echo $links['weixin']; ?>" type="text" name="weixin" placeholder="WeChat Link">
+                <input value="<?php echo $links['weixin'] ?? ''; ?>" type="text" name="weixin" placeholder="WeChat Link">
             </div>
             <button type="submit" class="btn">Сохранить</button>
         </form>

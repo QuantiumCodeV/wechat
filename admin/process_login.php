@@ -1,5 +1,8 @@
 <?php
 require "../config.php";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 
 // Проверка на наличие переменных
 if (!isset($USERNAME_DEFAULT) || !isset($PASSWORD_DEFAULT)) {

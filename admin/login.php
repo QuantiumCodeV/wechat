@@ -11,6 +11,13 @@ if (isset($_COOKIE['admin'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторизация</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
+        .errors{
+            font-size: 12px;
+            color: red;
+        }
         .login-form {
             width: 300px;
             margin: 100px auto;

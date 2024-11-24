@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 
 
 $config = [
-    "MYSQL_HOST" => "localhost",
+    "MYSQL_HOST" => "localhost", 
     "MYSQL_USER" => "admin",
     "MYSQL_PASSWORD" => "72Merasardtfy_",
     "MYSQL_DATABASE" => "wechat",
@@ -19,12 +19,19 @@ if ($mysql->connect_error) {
     die("Connection failed: " . $mysql->connect_error);
 }
 
-// Создание базы данных, если она не существует
-if ($mysql->query("CREATE DATABASE IF NOT EXISTS " . $config["MYSQL_DATABASE"]) === TRUE) {
-    echo "Database created successfully or already exists.";
-} else {
-    echo "Error creating database: " . $mysql->error;
-}
-
-// Подключение к базе данных
+// Создаем базу данных если не существует
+$mysql->query("CREATE DATABASE IF NOT EXISTS " . $config["MYSQL_DATABASE"]);
 $mysql->select_db($config["MYSQL_DATABASE"]);
+
+// Создаем таблицу links
+$sql = "CREATE TABLE IF NOT EXISTS links (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    apple VARCHAR(255),
+    macapple VARCHAR(255),
+    google VARCHAR(255),
+    microsoft VARCHAR(255)
+)";
+
+if (!$mysql->query($sql)) {
+    die("Error creating table: " . $mysql->error);
+}

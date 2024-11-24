@@ -1,5 +1,8 @@
 <?php
 include 'config.php';
+$sql = "SELECT * FROM links";
+$result = $mysql->query($sql);
+$links = $result->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="en">

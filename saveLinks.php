@@ -7,7 +7,7 @@ $google = $_POST['google'];
 $microsoft = $_POST['microsoft'];
 $weixin = $_POST['weixin'];
 
-$sql = "UPDATE links SET apple = '$apple', macapple = '$macapple', google = '$google', microsoft = '$microsoft', weixin = '$weixin'";
+$sql = "UPDATE links SET apple = '$apple', macapple = '$macapple', google = '$google', microsoft = '$microsoft', weixin = '$weixin' WHERE id = 1";
 $mysql->query($sql);
 
 header('Location: admin.php');

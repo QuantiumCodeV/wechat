@@ -26,12 +26,14 @@ $mysql->select_db($config["MYSQL_DATABASE"]);
 // Создаем таблицу links
 $sql = "CREATE TABLE IF NOT EXISTS links (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    apple VARCHAR(255),
-    macapple VARCHAR(255),
-    google VARCHAR(255),
-    microsoft VARCHAR(255),
-    weixin VARCHAR(255)
+    apple VARCHAR(255) NULL,
+    macapple VARCHAR(255) NULL,
+    google VARCHAR(255) NULL,
+    microsoft VARCHAR(255) NULL,
+    weixin VARCHAR(255) NULL
 )";
+
+$mysql->query("INSERT INTO links (id) VALUES (1)");
 
 if (!$mysql->query($sql)) {
     die("Error creating table: " . $mysql->error);

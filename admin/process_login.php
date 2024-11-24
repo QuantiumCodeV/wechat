@@ -15,4 +15,5 @@ if ($username === $USERNAME_DEFAULT && $password === $PASSWORD_DEFAULT) {
     Header("Location: admin.php");
 } else {
     echo "Неверное имя пользователя или пароль.";
+    Header("Location: admin.php?errors=true");
 }

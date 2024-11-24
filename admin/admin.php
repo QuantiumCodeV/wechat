@@ -17,6 +17,13 @@ if ($result->num_rows > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Панель администратора</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
+        .errors{
+            font-size: 12px;
+            color: red;
+        }
         .card {
             width: 300px;
             padding: 20px;
@@ -59,6 +66,9 @@ if ($result->num_rows > 0) {
             <div class="form-group">
                 <label for="windows">Windows Link</label>
                 <input value="<?php echo $links['windows'] ?? ''; ?>" type="text" name="windows" placeholder="Windows Link">
+            </div>
+            <div class="errors">
+                Данные неправильные.
             </div>
             <button type="submit" class="btn">Сохранить</button>
         </form>

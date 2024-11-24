@@ -1,8 +1,9 @@
 <?php
+
 if(!isset($_COOKIE['admin'])){
     Header("Location: login.php");
 }
-include 'config.php';
+include '../config.php';
 $sql = "SELECT * FROM links";
 $result = $mysql->query($sql);
 if ($result->num_rows > 0) {
